@@ -5,18 +5,131 @@
 }
 
 body {
-  /* Updated font-family to use Poppins as primary font */
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   line-height: 1.6;
-  /* Added dark background to body to ensure proper contrast detection */
-  background-color: #0f172a;
   color: white;
+  margin: 0;
+
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e293b 100%, #415800, white); 
+  background-size: 1%;
+  animation: bg 12s ease infinite;
 }
 
 .container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e293b 100%);
   color: white;
+}
+
+/* background-animate */
+
+.area{
+    width: 100%;
+    height:100%;
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 50px;
+    height: 50px;
+    background:rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    background: linear-gradient(-135deg, #3b82f6, #1e3a8a)code;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    background: linear-gradient(-135deg, #3b82f6, #1e3a8a);
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    background: linear-gradient(-135deg, #3b82f6, #1e3a8a);
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    background: linear-gradient(-135deg, #3b82f6, #1e3a8a);
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    background: linear-gradient(-135deg, #3b82f6, #1e3a8a);
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    background: linear-gradient(-135deg, #3b82f6, #1e3a8a);
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    background: linear-gradient(-135deg, #3b82f6, #1e3a8a);
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    background: linear-gradient(-135deg, #3b82f6, #1e3a8a);
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    background: linear-gradient(-135deg, #3b82f6, #1e3a8a);
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    background: linear-gradient(-135deg, #3b82f6, #1e3a8a);
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
 }
 
 /* Header Styles */
@@ -24,8 +137,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem;
-  /* Added explicit background for better contrast detection */
+  padding: 1.5rem 3rem;
   background: rgba(15, 23, 42, 0.9);
 }
 
@@ -43,11 +155,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.25rem; /* Added gap for spacing between logo image and CS text */
+  gap: 0.25rem; 
 }
 
 .logo-image {
-  height: 1.25rem; /* Added styles for logo image to match codersquad text height */
+  height: 1.25rem; 
   width: auto;
   object-fit: contain;
 }
@@ -85,7 +197,8 @@ body {
   padding: 5rem 1.5rem;
   text-align: center;
   /* Added explicit background for better contrast detection */
-  background: rgba(15, 23, 42, 0.8);
+  background: none;
+  opacity: 0.6;
 }
 
 .hero-title {
@@ -116,7 +229,8 @@ body {
   border: 1px solid #475569;
   border-radius: 0.5rem;
   padding: 1.5rem;
-  text-align: left;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
 }
 
 .card-title {
@@ -129,6 +243,11 @@ body {
 .card-description {
   color: #9ca3af;
   font-size: 0.875rem;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 10px 10px 14px #14b8a6;
 }
 
 /* Squad Section */
@@ -150,23 +269,27 @@ body {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 3rem;
-  text-align: left;
-  padding-left: 1rem;
+  text-align: center;
+  padding: 32px 0 0 0;
 }
 
 .team-card-container {
   width: 100%;
   height: 600px;
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: left;
 }
 
 /* Added carousel wrapper and animation styles */
 .team-carousel {
   width: 100%;
+  max-width: 1100px;
   height: 550px;
   overflow: hidden;
   position: relative;
+  background: none;
 }
 
 .team-slides {
@@ -179,7 +302,7 @@ body {
 .team-card {
   background-color: rgba(30, 41, 59, 0.5);
   border: 1px solid #475569;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   padding: 2rem;
   width: 20%;
   flex-shrink: 0;
@@ -194,7 +317,7 @@ body {
 
 .team-member {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
   min-height: 480px;
 }
@@ -205,8 +328,8 @@ body {
 }
 
 .avatar-gradient {
-  width: 30rem;
-  height: 30rem;
+  width: 25rem;
+  height: 25rem;
   border-radius: 50%;
   background: linear-gradient(135deg, #60a5fa, #14b8a6);
   padding: 0.25rem;
@@ -230,6 +353,10 @@ body {
   flex: 1;
   margin-left: 2rem;
   padding-top: 4rem;
+  padding-left: 2.5rem;
+  padding-bottom: 2rem;
+  border-left: 2px solid #14b8a6;
+  align-items: center;
 }
 
 .nav-dots {
@@ -239,8 +366,6 @@ body {
   justify-content: center;
   gap: 1rem;
   margin-top: 1.5rem;
-  background-color: rgba(30, 58, 138, 0.3);
-  border: 2px solid #3b82f6;
   border-radius: 2rem;
   padding: 0.75rem 1.5rem;
   max-width: fit-content;
@@ -250,17 +375,28 @@ body {
 
 /* Added arrow button styles with hover inversion effects */
 .nav-arrow {
-  background-color: transparent;
   border: 2px solid #9ca3af;
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
   color: #9ca3af;
   transition: all 0.3s ease;
+  z-index: 10;
+}
+.nav-arrow-left {
+    position: absolute;
+    top: 50%;
+    left: -3rem;
+    cursor: pointer;
+    z-index: 100;   
+}
+
+.nav-arrow-right {
+    position: absolute;
+    top: 50%;
+    right: -3rem;
+    cursor: pointer;  
 }
 
 .nav-arrow:hover {
@@ -390,5 +526,18 @@ body {
 
   .footer-copyright {
     text-align: left;
+  }
+}
+
+
+@keyframes bg {
+  0% {
+    background-size: 0% 50%;
+  }
+  50% {
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 0% 50%;
   }
 }

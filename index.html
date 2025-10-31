@@ -12,15 +12,29 @@
 </head>
 <body>
     <div class="container">
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
         <!-- Header -->
         <header class="header">
             <div class="logo">
                 <div class="logo-icon">
                     <!-- Added img tag for logo with same height as codersquad text -->
-                    <img src="/placeholder.svg" alt="Logo" class="logo-image" />
+                    
                     <span>CS</span>
                 </div>
-                <span class="logo-text">codersquad</span>
+                <span class="logo-text">codesquad</span>
             </div>
 
             <nav class="nav">
@@ -69,13 +83,19 @@
             <div class="team-card-container">
                 <!-- Added carousel wrapper and multiple team members -->
                 <div class="team-carousel">
+                    <button class="nav-arrow nav-arrow-right" onclick="nextSlide()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                        </svg>
+                    </button>
+
                     <div class="team-slides">
                         <div class="team-card active">
                             <div class="team-member">
                                 <div class="avatar-container">
                                     <div class="avatar-gradient">
                                         <div class="avatar">
-                                            <img src="team-member.jpg" alt="Team member" />
+                                            <img src="./imgs/IMG_7394.png" alt="Team member" />
                                         </div>
                                     </div>
                                 </div>
@@ -92,7 +112,7 @@
                                 <div class="avatar-container">
                                     <div class="avatar-gradient">
                                         <div class="avatar">
-                                            <img src="/placeholder.svg?height=120&width=120" alt="Team member" />
+                                            <img src="./imgs/IMG-20250904-WA0024.jpg" alt="Team member" />
                                         </div>
                                     </div>
                                 </div>
@@ -109,7 +129,7 @@
                                 <div class="avatar-container">
                                     <div class="avatar-gradient">
                                         <div class="avatar">
-                                            <img src="/placeholder.svg?height=120&width=120" alt="Team member" />
+                                            <img src="./imgs/IMG_7419.png" alt="Team member" />
                                         </div>
                                     </div>
                                 </div>
@@ -126,7 +146,7 @@
                                 <div class="avatar-container">
                                     <div class="avatar-gradient">
                                         <div class="avatar">
-                                            <img src="/placeholder.svg?height=120&width=120" alt="Team member" />
+                                            <img src="./imgs/IMG-20250827-WA0003.jpg" alt="Team member" />
                                         </div>
                                     </div>
                                 </div>
@@ -155,15 +175,19 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Made navigation dots interactive -->
-                <div class="nav-dots">
                     <button class="nav-arrow nav-arrow-left" onclick="previousSlide()">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
                         </svg>
                     </button>
+                </div>
+                
+
+                
+            </div>
+            <!-- Made navigation dots interactive -->
+                <div class="nav-dots">
+                    
                     <div class="dots-container">
                         <div class="dot active" data-slide="0"></div>
                         <div class="dot" data-slide="1"></div>
@@ -171,13 +195,8 @@
                         <div class="dot" data-slide="3"></div>
                         <div class="dot" data-slide="4"></div>
                     </div>
-                    <button class="nav-arrow nav-arrow-right" onclick="nextSlide()">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
-                        </svg>
-                    </button>
+                    
                 </div>
-            </div>
         </section>
     </div>
     
