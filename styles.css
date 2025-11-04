@@ -11,7 +11,7 @@ body {
   margin: 0;
 
   background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e293b 100%, #415800, white); 
-  background-size: 1%;
+  background-size: 300% 300%;
   animation: bg 12s ease infinite;
 }
 
@@ -50,6 +50,7 @@ body {
 
 .circles li:nth-child(1){
     left: 25%;
+    height: 20px;
     background: linear-gradient(-135deg, #3b82f6, #1e3a8a)code;
     animation-delay: 0s;
 }
@@ -57,6 +58,7 @@ body {
 
 .circles li:nth-child(2){
     left: 10%;
+    height: 40px;
     background: linear-gradient(-135deg, #3b82f6, #1e3a8a);
     animation-delay: 2s;
     animation-duration: 12s;
@@ -64,12 +66,14 @@ body {
 
 .circles li:nth-child(3){
     left: 70%;
+    height: 35px;
     background: linear-gradient(-135deg, #3b82f6, #1e3a8a);
     animation-delay: 4s;
 }
 
 .circles li:nth-child(4){
     left: 40%;
+    height: 65px;
     background: linear-gradient(-135deg, #3b82f6, #1e3a8a);
     animation-delay: 0s;
     animation-duration: 18s;
@@ -77,24 +81,28 @@ body {
 
 .circles li:nth-child(5){
     left: 65%;
+    height: 25px;
     background: linear-gradient(-135deg, #3b82f6, #1e3a8a);
     animation-delay: 0s;
 }
 
 .circles li:nth-child(6){
     left: 75%;
+    height: 50px;
     background: linear-gradient(-135deg, #3b82f6, #1e3a8a);
     animation-delay: 3s;
 }
 
 .circles li:nth-child(7){
     left: 35%;
+    height: 15px;
     background: linear-gradient(-135deg, #3b82f6, #1e3a8a);
     animation-delay: 7s;
 }
 
 .circles li:nth-child(8){
     left: 50%;
+    height: 30px;
     background: linear-gradient(-135deg, #3b82f6, #1e3a8a);
     animation-delay: 15s;
     animation-duration: 45s;
@@ -102,6 +110,7 @@ body {
 
 .circles li:nth-child(9){
     left: 20%;
+    height: 25px;
     background: linear-gradient(-135deg, #3b82f6, #1e3a8a);
     animation-delay: 2s;
     animation-duration: 35s;
@@ -109,6 +118,7 @@ body {
 
 .circles li:nth-child(10){
     left: 85%;
+    height: 20px;
     background: linear-gradient(-135deg, #3b82f6, #1e3a8a);
     animation-delay: 0s;
     animation-duration: 11s;
@@ -359,6 +369,21 @@ body {
   align-items: center;
 }
 
+.member-btn {
+  padding: 8px 16px;
+  margin-top: 18px;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  color: #e5e7eb;
+  background: transparent;
+  cursor: pointer;
+}
+
+.member-btn:hover {
+  background: #6b7280;
+  color: #121212;
+}
+
 .nav-dots {
   /* Updated nav-dots to be a container with blue border and rounded corners */
   display: flex;
@@ -532,12 +557,18 @@ body {
 
 @keyframes bg {
   0% {
-    background-size: 0% 50%;
+    background-size: 100% 125%;
+  }
+  25% {
+    background-size: 150% 225%;
   }
   50% {
-    background-size: 100% 100%;
+    background-size: 250% 300%;
+  }
+  75% {
+    background-size: 150% 225%;
   }
   100% {
-    background-size: 0% 50%;
+    background-size: 100% 125%;
   }
 }
