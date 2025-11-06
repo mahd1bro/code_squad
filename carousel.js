@@ -71,3 +71,19 @@ function previousSlide() {
     carouselInstance.prevSlide()
   }
 }
+
+// Projects page
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".project-card");
+
+  cards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      card.style.border = "1px solid #66fcf1";
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.border = "none";
+    });
+  });
+});
