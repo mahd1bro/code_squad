@@ -4,16 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Projects | Codersquad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="projects-header">
     <h1>Our Projects</h1>
-    <p>Explore what our talented team members have built!</p>
+    <nav class="nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="squad.html" class="nav-link">Team</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
   </header>
 
   <main class="projects-container">
-    <!-- Team Member: John Doe -->
     <section class="team-section">
       <h2>John Doe — Frontend Developer</h2>
       <div class="project-grid">
@@ -23,18 +29,18 @@
         </div>
         <div class="project-card">
           <h3>Landing Page Template</h3>
-          <p>A modern, reusable landing page template designed for startups and small businesses.</p>
+          <p>A modern, reusable landing page template designed for startups and small businesses. Customizable color palettes, with adjustable Sizing frames.</p>
         </div>
       </div>
     </section>
 
     <!-- Team Member: Jane Smith -->
     <section class="team-section">
-      <h2>Jane Smith — Backend Developer</h2>
+      <h2>Sara Ronan — Backend Developer</h2>
       <div class="project-grid">
         <div class="project-card">
           <h3>API for TicketEase</h3>
-          <p>A Node.js REST API for managing tickets, authentication, and analytics for a ticketing platform.</p>
+          <p>A Node.js REST API for managing tickets, authentication, and analytics for a ticketing platform. Added with CRUD features, its your go to ticket inventory.</p>
         </div>
         <div class="project-card">
           <h3>Inventory Management System</h3>
@@ -49,7 +55,7 @@
       <div class="project-grid">
         <div class="project-card">
           <h3>Mobile Fitness App Design</h3>
-          <p>An interactive app prototype that helps users track workouts, meals, and goals seamlessly.</p>
+          <p>An interactive app prototype that helps users track workouts, meals, and goals seamlessly. It also makes particular body types align with a fitness regimen made by fitness coaches.</p>
         </div>
         <div class="project-card">
           <h3>Dark Mode Dashboard</h3>
@@ -67,4 +73,52 @@
           <p>A collaborative app designed to track team performance, tasks, and milestones efficiently.</p>
         </div>
         <div class="project-card">
-          <h3>Project Plann
+          <h3>Project Planning Tool</h3>
+          <p>A tool for agile project planning and sprint management built to improve workflow visibility.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="junior-projects">
+      <div class="line-break"></div>
+      <div class="junior-header">
+        <h2>Beginner mini projects</h2>
+        <p>Start off your tech skills journey with these mini projects at a steady pace. Each project link is guaranteed to explore the key concept of your specific field of interest.</p>
+      </div>
+      <div class="project-links">
+        <ul>
+          <li><a href="#">Build an interpreter (C/C++)</a></li>
+          <li><a href="#">Create a Rogue-like game (C#)</a></li>
+          <li><a href="#">Build a simple web (Flask)</a></li>
+          <li><a href="#">Build a RESTful Microservice (Python)</a></li>
+          <li><a href="#">Build a simple interpreter (Python)</a></li>
+          <li><a href="#">Create a Realtime Chat App  (Golang, Angular)</a></li>
+          <li><a href="#">Build a Networkk Stack(Ruby)</a></li>
+          <li><a href="#">Build a Web App (Rust)</a></li>
+          <li><a href="#">Create an API (Django)</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Codersquad. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".project-card");
+
+    cards.forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        card.style.border = "1px solid #66fcf1";
+      });
+
+      card.addEventListener("mouseleave", () => {
+        card.style.border = "none";
+      });
+    });
+  });
+  </script>
+</body>
+</html>
